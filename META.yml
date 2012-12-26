@@ -1,0 +1,21 @@
+---
+abstract: 'Dist::Zilla configuration the way BAREFOOT does it'
+author:
+  - 'Buddy Burden <barefoot@cpan.org>'
+build_requires: {}
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921'
+license: artistic_2
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Dist-Zilla-PluginBundle-BAREFOOT
+requires:
+  Pod::Wordlist::hanekomu: 1.113620
+resources:
+  bugtracker: http://github.com/me/dist-zilla-pluginbundle-barefoot/issues
+  homepage: https://github.com/barefootcoder/dist-zilla-pluginbundle-barefoot
+  repository: https://github.com/barefootcoder/dist-zilla-pluginbundle-barefoot.git
+version: 0.01
