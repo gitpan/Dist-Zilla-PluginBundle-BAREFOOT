@@ -13,7 +13,7 @@ use warnings;
 	use Pod::Weaver::Section::Support 1.001 ();
 
 
-	our $VERSION = '0.01'; # VERSION
+	our $VERSION = '0.01_02'; # VERSION
 
 	my $bugtracker_content = <<'END';
 		This module is on GitHub.  Feel free to fork and submit patches.  Please note that I develop
@@ -80,8 +80,8 @@ END
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -90,7 +90,7 @@ Pod::Weaver::PluginBundle::BAREFOOT - BAREFOOT's default Pod::Weaver config
 
 =head1 VERSION
 
-version 0.01
+version 0.01_02
 
 =head1 DESCRIPTION
 
@@ -146,11 +146,10 @@ Buddy Burden <barefoot@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2012 by Buddy Burden.
+This software is Copyright (c) 2013 by Buddy Burden.
 
 This is free software, licensed under:
 
   The Artistic License 2.0 (GPL Compatible)
 
 =cut
-

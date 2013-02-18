@@ -5,7 +5,7 @@ use Method::Signatures::Modifiers;
 class Pod::Weaver::Section::LegalWithAddendum extends Pod::Weaver::Section::Legal
 {
 
-	our $VERSION = '0.01'; # VERSION
+	our $VERSION = '0.01_02'; # VERSION
 
 
 	has addendum => ( is => 'ro', isa => 'Str', predicate => '_has_addendum' );
@@ -26,6 +26,7 @@ class Pod::Weaver::Section::LegalWithAddendum extends Pod::Weaver::Section::Lega
 # COPYRIGHT
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -34,7 +35,7 @@ Pod::Weaver::Section::LegalWithAddendum - Dist::Zilla configuration the way BARE
 
 =head1 VERSION
 
-version 0.01
+version 0.01_02
 
 =head1 AUTHOR
 
@@ -42,11 +43,10 @@ Buddy Burden <barefoot@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2012 by Buddy Burden.
+This software is Copyright (c) 2013 by Buddy Burden.
 
 This is free software, licensed under:
 
   The Artistic License 2.0 (GPL Compatible)
 
 =cut
-

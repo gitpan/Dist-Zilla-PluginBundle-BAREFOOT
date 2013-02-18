@@ -34,7 +34,7 @@ class Dist::Zilla::PluginBundle::BAREFOOT with Dist::Zilla::Role::PluginBundle::
 	use Dist::Zilla::Plugin::CheckChangesHasContent				();
 
 
-	our $VERSION = '0.01'; # VERSION
+	our $VERSION = '0.01_02'; # VERSION
 
 	my @dirty_files = qw< dist.ini Changes README.pod >;
 
@@ -172,7 +172,7 @@ class Dist::Zilla::PluginBundle::BAREFOOT with Dist::Zilla::Role::PluginBundle::
 # ABSTRACT: Dist::Zilla configuration the way BAREFOOT does it
 # COPYRIGHT
 
-
+__END__
 
 =pod
 
@@ -182,7 +182,7 @@ Dist::Zilla::PluginBundle::BAREFOOT - Dist::Zilla configuration the way BAREFOOT
 
 =head1 VERSION
 
-version 0.01
+version 0.01_02
 
 =head1 SYNOPSIS
 
@@ -377,7 +377,7 @@ Buddy Burden <barefoot@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2012 by Buddy Burden.
+This software is Copyright (c) 2013 by Buddy Burden.
 
 This is free software, licensed under:
 
@@ -398,8 +398,3 @@ You can find documentation for this module with the perldoc command.
 none
 
 =cut
-
-
-__END__
-
-
