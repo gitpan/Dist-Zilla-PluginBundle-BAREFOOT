@@ -5,7 +5,7 @@ use Method::Signatures::Modifiers;
 class Pod::Weaver::Section::LegalWithAddendum extends Pod::Weaver::Section::Legal
 {
 
-	our $VERSION = '0.01_02'; # VERSION
+	our $VERSION = '0.02'; # VERSION
 
 
 	has addendum => ( is => 'ro', isa => 'Str', predicate => '_has_addendum' );
@@ -35,7 +35,7 @@ Pod::Weaver::Section::LegalWithAddendum - Dist::Zilla configuration the way BARE
 
 =head1 VERSION
 
-version 0.01_02
+version 0.02
 
 =head1 AUTHOR
 

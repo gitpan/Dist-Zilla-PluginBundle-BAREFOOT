@@ -65,7 +65,7 @@
          }
       }
    },
-   "release_status" : "testing",
+   "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
          "web" : "http://github.com/me/dist-zilla-pluginbundle-barefoot/issues"
@@ -77,6 +77,6 @@
          "web" : "https://github.com/barefootcoder/dist-zilla-pluginbundle-barefoot"
       }
    },
-   "version" : "0.01_02"
+   "version" : "0.02"
 }
 
