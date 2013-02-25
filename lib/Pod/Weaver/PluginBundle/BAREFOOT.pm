@@ -13,7 +13,7 @@ use warnings;
 	use Pod::Weaver::Section::Support 1.001 ();
 
 
-	our $VERSION = '0.03'; # VERSION
+	our $VERSION = '0.03_01'; # VERSION
 
 	my $bugtracker_content = <<'END';
 		This module is on GitHub.  Feel free to fork and submit patches.  Please note that I develop
@@ -90,7 +90,7 @@ Pod::Weaver::PluginBundle::BAREFOOT - BAREFOOT's default Pod::Weaver config
 
 =head1 VERSION
 
-version 0.03
+version 0.03_01
 
 =head1 DESCRIPTION
 
