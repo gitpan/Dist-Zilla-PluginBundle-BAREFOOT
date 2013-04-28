@@ -31,7 +31,6 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Plugin::CheckExtraTests" => 0,
     "Dist::Zilla::Plugin::CheckPrereqsIndexed" => "0.002",
     "Dist::Zilla::Plugin::CopyFilesFromBuild" => 0,
-    "Dist::Zilla::Plugin::Git::NextVersion" => 0,
     "Dist::Zilla::Plugin::GithubMeta" => "0.10",
     "Dist::Zilla::Plugin::InsertCopyright" => "0.001",
     "Dist::Zilla::Plugin::MetaNoIndex" => 0,
@@ -42,7 +41,7 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Plugin::ReadmeFromPod" => 0,
     "Dist::Zilla::Plugin::Test::PodSpelling" => "2.001002",
     "Dist::Zilla::Plugin::Test::Version" => 0,
-    "Dist::Zilla::PluginBundle::Git" => 0,
+    "Dist::Zilla::PluginBundle::Git" => "2.013",
     "List::MoreUtils" => 0,
     "Method::Signatures::Modifiers" => 0,
     "MooseX::Declare" => 0,
@@ -58,7 +57,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.03_02",
+  "VERSION" => "0.03_03",
   "test" => {
     "TESTS" => "t/*.t"
   }

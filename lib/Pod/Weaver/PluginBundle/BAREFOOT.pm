@@ -13,7 +13,7 @@ use warnings;
 	use Pod::Weaver::Section::Support 1.001 ();
 
 
-	our $VERSION = '0.03_02'; # VERSION
+	our $VERSION = '0.03_03'; # VERSION
 
 	my $bugtracker_content = <<'END';
 		This module is on GitHub.  Feel free to fork and submit patches.  Please note that I develop
@@ -32,6 +32,7 @@ END
 		my @plugins;
 		push @plugins, (
 			[ '@BAREFOOT/WikiDoc',     _exp('-WikiDoc'),	{} ],
+
 			[ '@BAREFOOT/CorePrep',    _exp('@CorePrep'),	{} ],
 			[ '@BAREFOOT/Name',        _exp('Name'),		{} ],
 			[ '@BAREFOOT/Version',     _exp('Version'),		{
@@ -39,16 +40,15 @@ END
 															}
 			],
 
-			#[ '@BAREFOOT/Prelude',     _exp('Region'),		{ region_name => 'prelude'     } ],
 			[ '@BAREFOOT/Synopsis',    _exp('Generic'),		{ header      => 'SYNOPSIS'    } ],
 			[ '@BAREFOOT/Description', _exp('Generic'),		{ header      => 'DESCRIPTION' } ],
 			[ '@BAREFOOT/Overview',    _exp('Generic'),		{ header      => 'OVERVIEW'    } ],
 		);
 
 		for my $plugin (
-			[ 'Attributes', _exp('Collect'),				{ command => 'attr'   } ],
-			[ 'Methods',    _exp('Collect'),				{ command => 'method' } ],
-			[ 'Functions',  _exp('Collect'),				{ command => 'func'   } ],
+			[ 'Attributes', 			_exp('Collect'),	{ command => 'attr'   } ],
+			[ 'Methods',    			_exp('Collect'),	{ command => 'method' } ],
+			[ 'Functions',  			_exp('Collect'),	{ command => 'func'   } ],
 		){
 			$plugin->[2]->{'header'} = uc $plugin->[0];
 			push @plugins, $plugin;
@@ -90,7 +90,7 @@ Pod::Weaver::PluginBundle::BAREFOOT - BAREFOOT's default Pod::Weaver config
 
 =head1 VERSION
 
-version 0.03_02
+version 0.03_03
 
 =head1 DESCRIPTION
 
@@ -99,14 +99,35 @@ following weaver.ini:
 
    [-WikiDoc]
  
-   [@Default]
+   [@CorePrep]
  
+   [Name]
+   [Version]
+ 
+   [Generic / SYNOPSIS]
+   [Generic / DESCRIPTION]
+   [Generic / OVERVIEW]
+ 
+   [Collect / ATTRIBUTES]
+   command = attr
+ 
+   [Collect / METHODS]
+   command = method
+ 
+   [Collect / FUNCTIONS]
+   command = func
+ 
+   [Leftovers]
    [Support]
    perldoc = 1
    websites = none
    bugs = metadata
    bugs_content = ... stuff (web only, email omitted) ...
-   repository_link = none
+   repository_link = both
+   repository_content = none
+ 
+   [Authors]
+   [Legal]
  
    [-Transformer]
    transfomer = List
