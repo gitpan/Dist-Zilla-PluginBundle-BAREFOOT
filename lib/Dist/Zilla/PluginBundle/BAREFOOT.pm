@@ -34,7 +34,7 @@ class Dist::Zilla::PluginBundle::BAREFOOT with Dist::Zilla::Role::PluginBundle::
 	use Dist::Zilla::Plugin::CheckChangesHasContent				();
 
 
-	our $VERSION = '0.03_01'; # VERSION
+	our $VERSION = '0.03_02'; # VERSION
 
 	my @dirty_files = qw< dist.ini Changes README.pod >;
 
@@ -182,7 +182,7 @@ Dist::Zilla::PluginBundle::BAREFOOT - Dist::Zilla configuration the way BAREFOOT
 
 =head1 VERSION
 
-version 0.03_01
+version 0.03_02
 
 =head1 SYNOPSIS
 

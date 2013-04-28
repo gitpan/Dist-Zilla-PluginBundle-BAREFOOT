@@ -1,5 +1,9 @@
 Revision history for Dist-Zilla-PluginBundle-BAREFOOT
 
+0.03_02   2013-04-27 23:30:18 PST8PDT
+
+	* fixed build error when doing `dzil release`
+
 0.03_01   2013-02-25 02:08:35 PST8PDT
 
 	* added check for uncommitted files
