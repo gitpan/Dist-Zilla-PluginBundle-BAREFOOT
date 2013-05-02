@@ -33,7 +33,7 @@ class Dist::Zilla::PluginBundle::BAREFOOT with Dist::Zilla::Role::PluginBundle::
 	use Dist::Zilla::Plugin::CheckChangesHasContent				();
 
 
-	our $VERSION = '0.03_03'; # VERSION
+	our $VERSION = '0.03_04'; # VERSION
 
 	my @dirty_files = qw< dist.ini Changes >;
 	my @exclude_generated_files = qw< README.pod META.json >;
@@ -175,7 +175,7 @@ Dist::Zilla::PluginBundle::BAREFOOT - Dist::Zilla configuration the way BAREFOOT
 
 =head1 VERSION
 
-version 0.03_03
+This document describes version 0.03_04 of Dist::Zilla::PluginBundle::BAREFOOT.
 
 =head1 SYNOPSIS
 
@@ -357,18 +357,6 @@ L<Dist::Zilla::Plugin::PodWeaver>
 
 =back
 
-=head1 AUTHOR
-
-Buddy Burden <barefoot@cpan.org>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is Copyright (c) 2013 by Buddy Burden.
-
-This is free software, licensed under:
-
-  The Artistic License 2.0 (GPL Compatible)
-
 =for :stopwords cpan testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto metadata placeholders metacpan
 
 =head1 SUPPORT
@@ -381,6 +369,30 @@ You can find documentation for this module with the perldoc command.
 
 =head2 Bugs / Feature Requests
 
+		This module is on GitHub.  Feel free to fork and submit patches.  Please note that I develop
+		via TDD (Test-Driven Development), so a patch that includes a failing test is much more
+		likely to get accepted (or least likely to get accepted more quickly).
+
+		If you just want to report a problem or suggest a feature, that's okay too.  You can create
+		an issue on GitHub here: L<http://github.com/me/dist-zilla-pluginbundle-barefoot/issues>.
+
+=head2 Source Code
+
 none
+L<https://github.com/barefootcoder/dist-zilla-pluginbundle-barefoot>
+
+  git clone https://github.com/barefootcoder/dist-zilla-pluginbundle-barefoot.git
+
+=head1 AUTHOR
+
+Buddy Burden <barefoot@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2013 by Buddy Burden.
+
+This is free software, licensed under:
+
+  The Artistic License 2.0 (GPL Compatible)
 
 =cut
