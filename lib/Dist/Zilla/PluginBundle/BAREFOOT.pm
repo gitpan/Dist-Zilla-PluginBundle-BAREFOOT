@@ -29,11 +29,12 @@ class Dist::Zilla::PluginBundle::BAREFOOT with Dist::Zilla::Role::PluginBundle::
 	use Dist::Zilla::Plugin::Test::PodSpelling		2.001002	();
 	use Dist::Zilla::Plugin::CopyFilesFromBuild					();
 	use Dist::Zilla::Plugin::CheckPrereqsIndexed	0.002		();
+	use Dist::Zilla::Plugin::CheckVersionIncrement	0.121750	();
 	#use Dist::Zilla::Plugin::MetaProvides::Package	1.14		();		# hides DB/main/private packages
 	use Dist::Zilla::Plugin::CheckChangesHasContent				();
 
 
-	our $VERSION = '0.03_04'; # VERSION
+	our $VERSION = '0.03_05'; # VERSION
 
 	my @dirty_files = qw< dist.ini Changes >;
 	my @exclude_generated_files = qw< README.pod META.json >;
@@ -117,14 +118,15 @@ class Dist::Zilla::PluginBundle::BAREFOOT with Dist::Zilla::Role::PluginBundle::
 			Manifest					=>														# core
 
 			# before release
-			TestRelease					=>														# core
 			[ 'Git::Check'				=>	{
 												allow_dirty	=> [@dirty_files, @exclude_generated_files]
 											}
 			],
+			CheckVersionIncrement		=>
 			#CheckPrereqsIndexed			=>
 			CheckChangesHasContent		=>
 			#CheckExtraTests				=>
+			TestRelease					=>														# core
 			ConfirmRelease				=>														# core
 
 			# release
@@ -175,7 +177,7 @@ Dist::Zilla::PluginBundle::BAREFOOT - Dist::Zilla configuration the way BAREFOOT
 
 =head1 VERSION
 
-This document describes version 0.03_04 of Dist::Zilla::PluginBundle::BAREFOOT.
+This document describes version 0.03_05 of Dist::Zilla::PluginBundle::BAREFOOT.
 
 =head1 SYNOPSIS
 
@@ -260,6 +262,7 @@ This is a L<Dist::Zilla> PluginBundle.  It is roughly equivalent to the followin
  	allow_dirty = META.json				; ignore this generated file
  
  	;[CheckPrereqsIndexed]				; ensure prereqs are on CPAN
+ 	[CheckVersionIncrement]				; ensure version has been bumped
  	[CheckChangesHasContent]			; ensure Changes has been updated
  	;[CheckExtraTests]					; ensure xt/ tests pass
  	[TestRelease]						; ensure t/ tests pass
